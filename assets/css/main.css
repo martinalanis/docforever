@@ -1,6 +1,8 @@
 :root {
 	--bg-color: #E8E8E8;
 	--deepblue: #005C8D;
+	--lightblue: #7BCCFD;
+	--blue: #0996EE;
 }
 
 body, html { background-color: var(--bg-color); }
@@ -11,6 +13,11 @@ header {
 }
 
 section { position: relative; }
+
+footer {
+	border-top: 1px solid #646567;
+	background-color: var(--white);
+}
 
 .home { 
 	height: 100vh;
@@ -48,22 +55,79 @@ section { position: relative; }
 	width: 100%;
 	height: 100%;
 }
-.nav-home {
+
+.searchbar { position: relative; }
+
+.searchbar input {
+	border-radius: 10px;
+	padding-left: 40px;
+}
+.searchbar button {
+	background-color: transparent;
+	border: none;
+	padding: 0;
+	width: 25px;
+	height: 25px;
 	position: absolute;
-	bottom: 20px;
+	left: 10px;
+	top: 50%;
+	margin-top: -14px;
+}
+.home-specialist .card { border:none; }
+.home-specialist .card-body h5,
+.home-specialist .card-body p {
+	margin: 0;
+	line-height: 1.1;
+}
+.specialist-rate {
+	color: #E6A800;
+	position: absolute;
+	top: 5px;
+	right: 10px;
+}
+.footer-link { margin: 0; }
+.footer-link a { color: var(--gray); }
+.footer-link a:hover,
+.footer-link a:focus,
+.footer-link a:active { 
+	color: var(--deepblue);
+	text-decoration: none;
+}
+.font-weight-500 { font-weight: 500; }
+.text-deepblue { color: var(--deepblue); }
+.text-gray { color: var(--gray); }
+.text-lightblue { color: var(--lightblue); }
+.text-blue { color: var(--blue); }
+.text-absolute {
+	position: absolute;
+	top: 0;
 	left: 0;
 	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: center;
+	align-items: center;
+}
+.text-absolute h2 { line-height: 1; }
+
+.bg-img2 {
+	background: url(../img/img2.png)no-repeat center center;
+	background-size: cover;
 }
 
-.nav-home .nav-link {
-	text-shadow: 0 0 2px #FFF;
-	border-radius: 25px;
-	/*font-weight: 700;*/
+.pb-6, .py-6 {
+    padding-bottom: 4rem!important;
 }
 
-.nav-home .nav-link:hover {
-	text-shadow: none;
-	color: var(--white) !important;
-	/*font-weight: 500;*/
-	background-color: var(--deepblue);
+.pb-7, .py-7 {
+    padding-bottom: 5rem!important;
+}
+
+.pt-6, .py-6 {
+    padding-top: 4rem!important;
+}
+
+.pt-7, .py-7 {
+    padding-top: 5rem!important;
 }
