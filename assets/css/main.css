@@ -1,5 +1,5 @@
 :root {
-	--bg-color: #E8E8E8;
+	--bg-color: #F8F8F8;
 	--deepblue: #005C8D;
 	--lightblue: #7BCCFD;
 	--blue: #0996EE;
@@ -15,7 +15,7 @@ header {
 section { position: relative; }
 
 footer {
-	border-top: 1px solid #646567;
+	border-top: 1px solid rgba(0,0,0,0.25);
 	background-color: var(--white);
 }
 
@@ -73,9 +73,14 @@ footer {
 	top: 50%;
 	margin-top: -14px;
 }
-.home-specialist .card { border:none; }
-.home-specialist .card-body h5,
-.home-specialist .card-body p {
+.cards-specialist .card { border:none; }
+
+.cards-specialist .card-body a { color: inherit; }
+
+.cards-specialist .card-body a:hover { text-decoration: none; }
+
+.cards-specialist .card-body h5,
+.cards-specialist .card-body p {
 	margin: 0;
 	line-height: 1.1;
 }
@@ -110,11 +115,28 @@ footer {
 	align-items: center;
 }
 .text-absolute h2 { line-height: 1; }
+.title { letter-spacing: 4px; }
 
 .bg-img2 {
 	background: url(../img/img2.png)no-repeat center center;
 	background-size: cover;
 }
+
+.card-service { 
+	border: none;
+	border-radius: 20px;
+	padding-top: 2.5rem;
+	padding-bottom: 2.5rem;
+	transition: all 0.2s ease-in-out;
+}
+
+.card-specialist { transition: all 0.2s ease-in-out; }
+
+.card-service:hover,
+.card-specialist:hover { box-shadow:  0 .5rem 1rem rgba(0,0,0,.15); }
+
+.card-img-container { display: flex; }
+.card-img-container img { object-fit: cover; }
 
 .pb-6, .py-6 {
     padding-bottom: 4rem!important;
