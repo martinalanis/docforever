@@ -25,9 +25,12 @@ footer {
 }
 
 .home { 
+	display: flex;
 	height: 100vh;
 	overflow: hidden;
 }
+
+.home > img { object-fit: cover; }
 
 .nav-menu {	font-weight: 500; }
 
@@ -193,13 +196,34 @@ footer {
 }
 
 @media (max-width: 767px) { 
+	main{ padding-top: 60px; }
+	
+	.home {
+		display: block;
+		height: auto;
+	}
+
+	.home .home-wrapper {
+		padding-top: 1rem;
+		padding-bottom: 1.5rem;
+		position: relative;
+		height: auto;
+	}
 
 	nav.navbar { background-color: var(--white); }
-	
+
 	.navbar .nav-link {	padding-left: 10px !important; }
 
 	.nav-link-cta {
 		margin-left: 0;
 		border-radius: 0;
+	}
+
+	.pb-7, .py-7 {
+	    padding-bottom: 3rem!important;
+	}
+
+	.pt-7, .py-7 {
+	    padding-top: 3rem!important;
 	}
 }
