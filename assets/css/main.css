@@ -1,11 +1,15 @@
 :root {
 	--bg-color: #F8F8F8;
 	--deepblue: #005C8D;
-	--lightblue: #7BCCFD;
+	--lightblue: #00C2FF;
 	--blue: #0996EE;
+	--yellow: #E6A800;
 }
 
-body, html { background-color: var(--bg-color); }
+body, html { 
+	line-height: 1.2;
+	background-color: var(--bg-color);
+}
 
 header { 
 	background-color: rgba(255,255,255,0.3);
@@ -15,6 +19,7 @@ header {
 section { position: relative; }
 
 footer {
+	line-height: 1.5;
 	border-top: 1px solid rgba(0,0,0,0.25);
 	background-color: var(--white);
 }
@@ -73,19 +78,26 @@ footer {
 	top: 50%;
 	margin-top: -14px;
 }
+.social a { 
+	color: var(--dark);
+	margin-right: 10px;
+}
+.social a:hover { color: var(--deepblue); }
 .cards-specialist .card { border:none; }
 
-.cards-specialist .card-body a { color: inherit; }
+.card-specialist { transition: all 0.2s ease-in-out; }
 
-.cards-specialist .card-body a:hover { text-decoration: none; }
+.card-specialist .card-body a { color: inherit; }
 
-.cards-specialist .card-body h5,
-.cards-specialist .card-body p {
+.card-specialist .card-body a:hover { text-decoration: none; }
+
+.card-specialist .card-body h5,
+.card-specialist .card-body p {
 	margin: 0;
 	line-height: 1.1;
 }
 .specialist-rate {
-	color: #E6A800;
+	color: var(--yellow);
 	position: absolute;
 	top: 5px;
 	right: 10px;
@@ -103,6 +115,7 @@ footer {
 .text-gray { color: var(--gray); }
 .text-lightblue { color: var(--lightblue); }
 .text-blue { color: var(--blue); }
+.text-yellow { color: var(--yellow); }
 .text-absolute {
 	position: absolute;
 	top: 0;
@@ -122,21 +135,46 @@ footer {
 	background-size: cover;
 }
 
+.bg-lightblue { background-color: var(--lightblue); }
+
+.btn-deepblue {
+	color: var(--white);
+	background-color: var(--deepblue);
+	border-color: var(--deepblue);
+}
+
 .card-service { 
 	border: none;
-	border-radius: 20px;
 	padding-top: 2.5rem;
 	padding-bottom: 2.5rem;
 	transition: all 0.2s ease-in-out;
 }
 
-.card-specialist { transition: all 0.2s ease-in-out; }
+.card-calendar .list-group-item {
+	padding: 0.25rem;
+	font-size: 90%;
+}
+
+.card-calendar .calendar-details .col { 
+	padding-left: 5px;
+	padding-right: 5px;
+}
 
 .card-service:hover,
-.card-specialist:hover { box-shadow:  0 .5rem 1rem rgba(0,0,0,.15); }
+.card-specialist:not(.specialist-profile):hover { box-shadow:  0 .5rem 1rem rgba(0,0,0,.15); }
 
 .card-img-container { display: flex; }
+
 .card-img-container img { object-fit: cover; }
+
+.specialist-profile {
+	border: none;
+	background-color: transparent;
+}
+
+.specialist-profile-info {
+	border: 1px solid rgba(0,0,0,0.25);
+}
 
 .pb-6, .py-6 {
     padding-bottom: 4rem!important;
@@ -152,4 +190,16 @@ footer {
 
 .pt-7, .py-7 {
     padding-top: 5rem!important;
+}
+
+@media (max-width: 767px) { 
+
+	nav.navbar { background-color: var(--white); }
+	
+	.navbar .nav-link {	padding-left: 10px !important; }
+
+	.nav-link-cta {
+		margin-left: 0;
+		border-radius: 0;
+	}
 }
