@@ -56,6 +56,10 @@ footer {
 .nav-menu .nav-link.nav-link-cta:focus,
 .nav-menu .nav-link.nav-link-cta:active { color: var(--white) !important; }
 
+.home-form > button[type=submit] {
+	background: #b53b2e;
+}
+
 .home .home-wrapper {
 	position: absolute;
 	top: 0;
@@ -131,10 +135,11 @@ footer {
 	align-items: center;
 }
 .text-absolute h2 { line-height: 1; }
+.text-shadow-1 { text-shadow: 1px 1px #565557;  }
 .title { letter-spacing: 4px; }
 
-.bg-img2 {
-	background: url(../img/img2.png)no-repeat center center;
+.bg-home-blue {
+	background: url(../img/bg-home-blue.png)no-repeat bottom right;
 	background-size: cover;
 }
 
